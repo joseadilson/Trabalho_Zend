@@ -1,0 +1,43 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <h3>Categorias</h3>
+  </div>
+</nav>
+
+<?php $this->mensagem(); ?>
+
+  <div class="container-fluid"> 
+
+    <p><a href="<?php echo $this->url(array('action' => 'create')); ?>" class="btn btn-primary navbar-btn">Cadastrar nova</a></p>
+  </div>
+
+
+<div class="container-fluid">
+  <div class="table-responsive">
+    <table border="1" class="table table-bordered table-hover">
+      <thead>
+        <tr>
+          <td class="warning"><span style="font-weight: bold">Código</td></span>
+          <td class="warning"><span style="font-weight: bold">Categoria</td></span>
+          <td class="warning"><span style="font-weight: bold">Alterar</td></span>
+        </tr>
+      </thead>
+      <tbody>
+          <?php foreach ($this->categorias as $categoria) { ?>
+            <tr>
+              <td><?php echo $categoria['idcategoria']; ?></td>
+              <td><?php echo $categoria['categoria']; ?></td>
+              <td>
+                <!--<button type="button" class="btn btn-success btn-xs">-->
+                  <a class="btn btn-primary btn-xs" href="<?php echo $this->url(array('action' => 'update', 'idcategoria' => $categoria['idcategoria'])); ?>">editar</a>
+                <!--</button>-->
+               <!-- <button type="button" class="btn btn-danger btn-xs"> -->
+                  <a class="btn btn-danger btn-xs" href="<?php echo $this->url(array('action' => 'delete', 'idcategoria' => $categoria['idcategoria'])); ?>" >apagar</a>
+                <!--</button>-->
+              </td>
+            </tr>
+        <?php } ?>
+      </tbody>
+    </table>
+  </div>
+</div>

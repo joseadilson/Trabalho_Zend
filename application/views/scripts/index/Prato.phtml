@@ -1,0 +1,22 @@
+<div class="container-fluid">
+  <div class="table-responsive">
+    <table border="1" class="table table-bordered table-hover">
+      <thead>
+        <tr>
+          <td class="warning"><span style="font-weight: bold">Categoria</td></span>
+          <td class="warning"><span style="font-weight: bold">Nome do prato</td></span>
+          <td class="warning"><span style="font-weight: bold">Preço</td></span>
+        </tr>
+      </thead>
+	    <tbody>
+         
+          	<tr>
+              <td><?php echo $this->prato['categoria']; ?>
+              <td></small> <?php echo $this->prato['nomePrato']; ?>
+              <td><p><?php echo nl2br($this->prato['preco']); ?></p>
+              </td>
+            </tr>
+     
+       </tbody>
+
+</div>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Restaurante</title>
+    <meta charset="utf-8" />
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <base href="<?php echo $this->baseUrl(); ?>" />
+    <!--<link href='https://fonts.googleapis.com/css?family=Roboto:400,700,500' rel='stylesheet' type='text/css'>-->
+   <!-- <link rel="stylesheet" href="/css/blog.css" />-->
+  <!-- <link rel="stylesheet" href="/bootstrap-3.3.7-dist/css/bootstrap.css"/>#-->
+  </head>
+
+  <body>
+   <div class="container-fluid">
+
+      <div class="page-header">
+          <!--<h1><marquee behavior="Alternate"> Bem vindo ao restaurante!</marquee></h1>-->
+      </div>
+          <div>
+            <ul id="breadcrumb" >
+              Você esta em: <?php
+              echo $this->navigation()->breadcrumbs()
+                      ->setMinDepth(null) // start at level 0
+                      ->setMaxDepth(1) // stop at level 1
+                      ->setSeparator('&raquo;');?>
+            </ul>
+          </div>
+      <nav class="navbar navbar-default">
+        <ul id="menu" class="nav navbar-nav pagination">
+          <li style="float:right"><?php echo $this->navigation(); ?></a></li></nav>
+        </ul>
+      </nav>
+
+       <div id="content" class=""><?php echo $this->layout()->content ?></div>
+
+    </div>
+  </body>
+
+</html>

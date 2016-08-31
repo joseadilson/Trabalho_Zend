@@ -1,0 +1,14 @@
+
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <h3>Pratos</h3>
+  </div>
+
+<ul>
+    <?php foreach ($this->posts as $prato) { ?>
+      <li>
+        <a href="<?php echo $this->url(array('action' => 'prato', 'idprato' => $prato['idprato'])); ?>"><?php echo $prato['categoria']; ?>/<?php echo $prato['nomePrato']; ?></a>
+      </li>
+  <?php } ?>
+</ul>
